@@ -51,10 +51,12 @@ void game_init_dis(void){
             w = -1;
             h++;
         }
-    attroff(COLOR_PAIR(BLACK));
-    for (int i = 0; i < 8;i++){
-        mvprintw(Go_S_y+i*2, Go_S_x -3, "%d", i + 1);
-    }
+
+            attroff(COLOR_PAIR(BLACK));
+        for (int i = 0; i < 8; i++)
+        {
+            mvprintw(Go_S_y + i * 2, Go_S_x - 3, "%d", i + 1);
+        }
     for (int i = 0; i < 8;i++){
         mvprintw(Go_S_y-2, Go_S_x + i*4+2, "%c", i + 'A');
     }
@@ -68,11 +70,9 @@ void game_init_dis(void){
     mvprintw(7, 95, "　　　　　　　　　　　　　　 ");
     attroff(COLOR_PAIR(12));
     attron(COLOR_PAIR(13));
-    int black_count = 0;
-    int white_count = 0;
     mvprintw(5, 46, "　　　　 　");
-    mvprintw(6,46,"　黒 : %2d　", black_count);
-    mvprintw(7,46,"　白 : %2d　", white_count);
+    mvprintw(6,46,"　黒 : %2d　", 2);
+    mvprintw(7,46,"　白 : %2d　", 2);
     mvprintw(8, 46, "　　　 　　");
     attroff(COLOR_PAIR(13));
     attron(COLOR_PAIR(14));
@@ -103,20 +103,20 @@ void game_init_dis(void){
     refresh();
     attron(A_BOLD);
     attron(COLOR_PAIR(WHITE));
-    mvprintw(Go_S_y+4*2 ,Go_S_x+3*3+4, "●");
+    mvprintw(Go_S_y+4*2 ,Go_S_x+3*4+1, "●");
 
     attroff(COLOR_PAIR(WHITE));
     attron(COLOR_PAIR(BLACK));
-    mvprintw(Go_S_y+3*2 ,Go_S_x+3*3+4, "●");
+    mvprintw(Go_S_y+3*2 ,Go_S_x+3*4+1, "●");
 
     attroff(COLOR_PAIR(BLACK));
     refresh();
     attron(COLOR_PAIR(WHITE));
-    mvprintw(Go_S_y+3*2 ,Go_S_x+4*3+5, "●");
+    mvprintw(Go_S_y+3*2 ,Go_S_x+4*4+1, "●");
 
     attroff(COLOR_PAIR(WHITE));
     attron(COLOR_PAIR(BLACK));
-    mvprintw(Go_S_y+4*2 ,Go_S_x+4*3+5, "●");
+    mvprintw(Go_S_y+4*2 ,Go_S_x+4*4+1, "●");
 
     attroff(COLOR_PAIR(BLACK));
     refresh();

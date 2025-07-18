@@ -78,14 +78,14 @@ boolean observe_connection(int mode) {
         while(true){
             char target_ipaddres[40] = {0};
             int ch;
-            int i = 0;
+            size_t i = 0;
             keypad(stdscr, TRUE);
             move(center_y+1-3, center_x-18);
             printw(">>");
             refresh();
             curs_set(1);
 
-            while (i < sizeof(target_ipaddres) - 1) {
+            while (i < sizeof(target_ipaddres) - 2) {
                 ch = getch();
                 if (ch == ESCAPE) { // escape
                     return false;
@@ -141,8 +141,13 @@ boolean observe_connection(int mode) {
         }
     }
 
-    if (sock_fd != -1) {
-        close(sock_fd);
+    if (mode == HOST) {
+        // host
+        if (sock_fd != -1) {
+            close(sock_fd);
+        }
+    } else if (mode == GUEST) {
+        // guest
     }
     return success;
 }

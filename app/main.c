@@ -10,11 +10,11 @@
 #include "define.h"
 
 // 1-> コンピュータ 5 -> ホスト 6 -> ゲスト mode
-int main(int argc, char *argv[]) {
-    if (argc>1){
-        fprintf(stderr, "オプションはありません。\n");
-        return 1;
-    }
+int main(void) {
+    // if (argc>1){
+    //     fprintf(stderr, "オプションはありません。\n");
+    //     return 1;
+    // }
 
     setlocale(LC_ALL, "");
     initscr();
@@ -29,3 +29,6 @@ int main(int argc, char *argv[]) {
     endwin();
     return 0;
 }
+
+// ログ -> おかれた場所
+// メッセージ -> 置けない警告、パスされた警告、ヒント

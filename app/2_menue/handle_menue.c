@@ -10,13 +10,13 @@
 #include "screen_host.h"
 #include "screen_guest.h"
 #include "../boolean.h"
-#include "../define.h"
+// #include "../define.h"
 
 
 
 void handle_menue(void){
     int target = 1;
-    int mode = 0;
+    mode = 0;
     start_color();
     init_pair(1, COLOR_WHITE, COLOR_RED);
     init_pair(2, COLOR_WHITE, COLOR_BLUE);

@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <time.h>
+#include <unistd.h>
 
 #include "game_algo.h"
 #include"../define.h"
@@ -10,7 +11,7 @@ void game_algo(int select_area[]){
         int x;
         int y;
     } Point;
-
+    sleep(1);
     Point corner_moves[4];
     int corner_count = 0;
     Point edge_moves[28];
@@ -57,7 +58,7 @@ void game_algo(int select_area[]){
         return;
     }
 
-    if (other_count > 0) {　// その他
+    if (other_count > 0) { // その他
         int choice = rand() % other_count;
         select_area[0] = other_moves[choice].x;
         select_area[1] = other_moves[choice].y;
@@ -67,4 +68,5 @@ void game_algo(int select_area[]){
     select_area[0] = -1;
     select_area[1] = -1;
     select_area[2] = 1;
+
 }
