@@ -1,4 +1,6 @@
 
+#include <string.h>
+
 #include   "game_serch_placeable.h"
 #include "../define.h"
 #include "../boolean.h"

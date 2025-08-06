@@ -1,3 +1,4 @@
+#include "boolean.h"
 #define TOP 1
 #define OPPONENT 2
 #define HELP 3
@@ -47,3 +48,12 @@
 
 #define RECEIVE 0
 #define SEND 1
+
+typedef struct {
+    int player_color; // GO_BLACK or GO_WHITE
+    int x;            // 座標x
+    int y;            // 座標y
+    boolean is_pass;  // パスしたかどうか
+} MoveData;
+
+extern char log_area_data[LOG_AREA_HEIGHT - 2][LOG_AREA_WIDTH];

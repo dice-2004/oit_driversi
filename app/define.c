@@ -26,3 +26,7 @@ const int dy[8] = {0, 1, 1, 1, 0, -1, -1, -1};
 
 int currentflag = 0; // 1-> pass, 0-> not pass
 int preflag = 0; // 1-> pass, 0-> not pass
+char log_area_data[LOG_AREA_HEIGHT - 2][LOG_AREA_WIDTH] = {0};
+
+// 現在の手の情報を格納するグローバル構造体
+MoveData current_move;
