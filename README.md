@@ -15,6 +15,11 @@
   - ncurses
   - socket
 
+## 画面
+<img width="1384" height="671" alt="スクリーンショット 2025-08-06 230908" src="https://github.com/user-attachments/assets/13742b58-d37a-4bdf-b62d-66ce73d67b1f" />
+<img width="1382" height="667" alt="スクリーンショット 2025-08-06 230829" src="https://github.com/user-attachments/assets/e59fa8d1-f6ee-4bc0-8392-b00f0cb707cb" />
+
+
 
 このアプリの仕様についてです。
 
